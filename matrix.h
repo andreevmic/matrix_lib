@@ -9,13 +9,13 @@ public:
 	void quad(std::vector<double> nums);
 	void fit(std::vector<double> nums, double missing_value = 0);
 	void set(int row, int col, double value);
-	double get(int row, int col);
+	double get(int row, int col) const;
 	void change_shape(int n_row, int n_col);
 	void fit_shape(int n_row, int n_col, double missing_value = 0);
-	void print();
+	void print() const;
 
 private:
 	int rows, cols;
 	std::vector<std::vector<double>> data;
-	int getMaxWidth();
+	int getMaxWidth() const;
 };
